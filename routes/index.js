@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/notification', function(req, res, next) {
   body = req.body;
-  webpush.sendWebPush(body.payload, body.subscription, body.gcm_key);
+  webpush.sendWebPush(JSON.stringify(body.payload), body.subscription, body.gcm_key);
   res.end();
 });
 

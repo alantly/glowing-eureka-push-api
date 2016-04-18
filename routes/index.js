@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/notification', function(req, res, next) {
-  body = req.body
-  webpush.sendWebPush(body.message, body.subscription, body.gcm_key);
+  body = req.body;
+  webpush.sendWebPush(body.payload, body.subscription, body.gcm_key);
   res.end();
 });
 

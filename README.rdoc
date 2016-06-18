@@ -3,6 +3,7 @@
 Encrypt notifications and send to GCM built using express. Service will take the payload and encrypt it based on the Push Notification specification using keys provided. Once completed, the service will push the encrypted payload to gcm with the specific user device endpoint.
 
 === Starting the server:
+Server starts at port 4000
   npm install
   npm start
 
@@ -11,9 +12,9 @@ Encrypt notifications and send to GCM built using express. Service will take the
 - gcm_key is obtained from Google Cloud Messaging for Android service. It is also sent with the manifest.json when serving the service worker.
 - payload is specific to how your service worker parses the GCM message.
 
-=== Sample Payload to localhost:4000/notification
+=== Sample Payload post to /notification
   {
-      "subscription": {
+    "subscription": {
       "endpoint": "https://android.googleapis.com/gcm/send/xxxxxxxxxxxx",
       "keys": {
         "auth": "xxxxxxxxx",

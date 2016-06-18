@@ -1,6 +1,6 @@
 = Glowing-eureka-push-api
 == Description
-Encrypt notifications and send to GCM built using express. Service will take the payload and encrypt it based on the Push Notification specification using keys provided. Once completed, the service will push the encrypted payload to gcm with the specific user device endpoint.
+Encrypt notifications and send to GCM built using express. Service will take the payload and encrypt it based on the Google Web Push Library using keys provided, https://github.com/GoogleChrome/web-push-encryption. Once completed, the service will push the encrypted payload to gcm with the specific user device endpoint.
 
 === Starting the server:
 Server starts at port 4000
